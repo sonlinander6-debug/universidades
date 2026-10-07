@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía verificada de universidades latinoamericanas con carreras 100% en línea para estudiantes extranjeros.">
+  <title>Universidades 100% en línea en Latinoamérica · Guía 2026</title>
+  <style>
+    :root {
+      --ink: #132b2f;
+      --muted: #557074;
+      --paper: #f6f1e7;
+      --card: #fffdf8;
+      --navy: #123a43;
+      --teal: #0d766f;
+      --mint: #bde5d5;
+      --coral: #ee6d4f;
+      --amber: #efb84a;
+      --line: #d9ddd3;
+      --good: #176b51;
+      --warn: #9a5b09;
+      --risk: #9c3c2f;
+      --shadow: 0 16px 45px rgba(18, 58, 67, .10);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 4%, rgba(238,109,79,.14), transparent 20rem),
+        radial-gradient(circle at 3% 32%, rgba(13,118,111,.11), transparent 23rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    .wrap { width: calc(100% - 32px); max-width: 1160px; margin-inline: auto; }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      color: white;
+      background: linear-gradient(135deg, #0d3038 0%, #105b5d 66%, #0d766f 100%);
+      padding: 34px 0 48px;
+      border-bottom: 5px solid var(--coral);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      right: -120px;
+      top: -120px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 50%;
+      box-shadow: 0 0 0 42px rgba(255,255,255,.035), 0 0 0 86px rgba(255,255,255,.025);
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #d9f4ea;
+    }
+    .eyebrow::before { content: ""; width: 22px; height: 3px; border-radius: 9px; background: var(--coral); }
+    h1 {
+      max-width: 850px;
+      margin: 18px 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 7vw, 5.6rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+      font-weight: 700;
+    }
+    .hero p { max-width: 740px; margin: 0; color: #d6e8e5; font-size: clamp(1rem, 2.2vw, 1.2rem); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    .hero-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .jumpbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(246,241,231,.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .jumpbar .wrap { display: flex; gap: 7px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+    .jumpbar .wrap::-webkit-scrollbar { display: none; }
+    .jumpbar a {
+      flex: none;
+      text-decoration: none;
+      color: var(--navy);
+      background: white;
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    .jumpbar a:hover, .jumpbar a:focus-visible { color: white; background: var(--teal); border-color: var(--teal); outline: none; }
+
+    main { padding: 32px 0 70px; }
+    .lede-grid { display: grid; grid-template-columns: 1.45fr .9fr; gap: 20px; align-items: stretch; }
+    .panel, .university, .check-card {
+      background: rgba(255,253,248,.9);
+      border: 1px solid rgba(19,43,47,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .panel { padding: clamp(20px, 4vw, 34px); }
+    .panel h2, .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: -.025em;
+      line-height: 1.08;
+    }
+    .panel h2 { margin: 0 0 13px; font-size: clamp(1.6rem, 4vw, 2.45rem); }
+    .panel p { margin: 0 0 12px; }
+    .verdict { border-left: 6px solid var(--coral); }
+    .price-note { background: var(--navy); color: white; }
+    .price-note strong { color: #bff3df; display: block; font-size: 1.25rem; margin-bottom: 8px; }
+    .price-note p { color: #d8e8e6; }
+
+    .summary {
+      margin-top: 22px;
+      overflow-x: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 820px; }
+    th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { background: #e5eee9; color: var(--navy); font-size: .78rem; text-transform: uppercase; letter-spacing: .055em; }
+    td { font-size: .9rem; }
+    tr:last-child td { border-bottom: 0; }
+    .rank { display: inline-grid; place-items: center; width: 28px; height: 28px; color: white; background: var(--teal); border-radius: 9px; font-weight: 900; }
+    .status { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-weight: 800; font-size: .78rem; }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+    .status.good { color: var(--good); }
+    .status.warn { color: var(--warn); }
+    .status.risk { color: var(--risk); }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(2, minmax(150px, .7fr));
+      gap: 10px;
+      margin: 32px 0 10px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+    }
+    .filters label { display: grid; gap: 5px; color: var(--muted); font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; }
+    .filters input, .filters select {
+      width: 100%;
+      color: var(--ink);
+      background: white;
+      border: 1px solid #c8d1cc;
+      border-radius: 12px;
+      padding: 10px 12px;
+      outline: none;
+    }
+    .filters input:focus, .filters select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,118,111,.13); }
+    #resultCount { margin: 8px 2px 0; color: var(--muted); font-size: .85rem; }
+
+    .region { padding-top: 58px; }
+    .section-head { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: end; margin-bottom: 18px; }
+    .section-head small { color: var(--coral); text-transform: uppercase; font-weight: 900; letter-spacing: .09em; }
+    .section-head h2 { margin: 5px 0 0; font-size: clamp(2rem, 5vw, 3.5rem); }
+    .section-head p { max-width: 540px; color: var(--muted); margin: 0; }
+    .university-list { display: grid; gap: 18px; }
+    .university { overflow: hidden; }
+    .u-top { padding: 24px clamp(18px, 4vw, 30px); background: linear-gradient(110deg, rgba(189,229,213,.32), transparent); border-bottom: 1px solid var(--line); }
+    .u-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .u-title h3 { margin: 0 0 5px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 2.2rem); line-height: 1.07; }
+    .u-title p { margin: 0; color: var(--muted); }
+    .badge { flex: none; padding: 7px 10px; border-radius: 999px; font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .045em; }
+    .badge.free { color: #0f553f; background: #c7eedf; }
+    .badge.low { color: #73500b; background: #ffe3a4; }
+    .badge.paid { color: #7d352b; background: #ffd1c7; }
+    .badge.verify { color: #653254; background: #f0d2e7; }
+    .fact-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
+    .fact { padding: 12px; border: 1px solid rgba(19,43,47,.10); border-radius: 14px; background: rgba(255,255,255,.72); }
+    .fact span { display: block; color: var(--muted); font-size: .68rem; font-weight: 900; text-transform: uppercase; letter-spacing: .055em; }
+    .fact strong { display: block; margin-top: 3px; font-size: .93rem; }
+    .u-body { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; padding: 24px clamp(18px, 4vw, 30px) 28px; }
+    .u-body h4 { margin: 0 0 9px; color: var(--teal); font-size: .78rem; text-transform: uppercase; letter-spacing: .075em; }
+    .u-body p { margin: 0 0 16px; }
+    .clean { margin: 0 0 18px; padding-left: 1.15rem; }
+    .clean li { margin: 6px 0; }
+    .callout { border-radius: 14px; padding: 13px 15px; margin: 0 0 16px; font-size: .9rem; }
+    .callout strong { display: block; margin-bottom: 2px; }
+    .callout.good { background: #e2f4ec; color: #164f3e; }
+    .callout.warn { background: #fff0cc; color: #6e4a04; }
+    .callout.risk { background: #fbe0da; color: #753328; }
+    details { border-top: 1px solid var(--line); padding: 12px 0; }
+    summary { cursor: pointer; color: var(--navy); font-weight: 850; }
+    details p, details ul { margin-top: 10px !important; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .links a {
+      text-decoration: none;
+      color: white;
+      background: var(--navy);
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: .78rem;
+      font-weight: 850;
+    }
+    .links a.secondary { color: var(--navy); background: #e4ece8; }
+    .links a:hover, .links a:focus-visible { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(18,58,67,.16); outline: none; }
+    .hidden { display: none !important; }
+
+    .excluded { margin-top: 25px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .excluded article { padding: 18px; border-radius: 18px; background: #f7dfd8; border: 1px solid #efc2b6; }
+    .excluded h3 { margin: 0 0 7px; font-size: 1rem; }
+    .excluded p { margin: 0; color: #693b33; font-size: .9rem; }
+    .excluded a { display: inline-block; margin-top: 8px; font-weight: 800; font-size: .8rem; }
+
+    .checklist { padding-top: 65px; }
+    .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .check-card { padding: clamp(20px, 4vw, 30px); }
+    .check-card h2 { margin: 0 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 4vw, 2.2rem); }
+    .numbered { list-style: none; padding: 0; margin: 0; counter-reset: item; }
+    .numbered li { position: relative; padding: 0 0 13px 42px; min-height: 34px; counter-increment: item; }
+    .numbered li::before { content: counter(item); position: absolute; left: 0; top: -2px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; color: white; background: var(--teal); font-weight: 900; }
+    .question-box { background: var(--navy); color: white; }
+    .question-box ol { color: #d9e9e6; padding-left: 1.2rem; }
+    .question-box li { margin: 9px 0; }
+    .mini { color: var(--muted); font-size: .87rem; }
+
+    .method { margin-top: 30px; padding: 26px; border-radius: var(--radius); background: #e1e8e3; }
+    .method h2 { margin-top: 0; font-family: Georgia, "Times New Roman", serif; }
+    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .method p { margin: 0 0 10px; }
+    .source-list { columns: 2; column-gap: 28px; padding-left: 1.1rem; }
+    .source-list li { break-inside: avoid; margin: 0 0 8px; font-size: .86rem; }
+    .source-list a { text-underline-offset: 2px; }
+
+    footer { padding: 28px 0 45px; color: var(--muted); font-size: .83rem; }
+    .print-btn { border: 0; border-radius: 10px; padding: 9px 13px; cursor: pointer; color: white; background: var(--coral); font-weight: 850; }
+
+    @media (max-width: 820px) {
+      .lede-grid, .u-body, .check-grid, .method-grid { grid-template-columns: 1fr; }
+      .fact-row { grid-template-columns: repeat(2, 1fr); }
+      .section-head { grid-template-columns: 1fr; align-items: start; }
+      .filters { grid-template-columns: 1fr 1fr; }
+      .filters label:first-child { grid-column: 1 / -1; }
+      .source-list { columns: 1; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 22px); max-width: 1160px; }
+      .hero { padding: 26px 0 38px; }
+      .hero h1 { font-size: 2.55rem; }
+      .u-title-row { display: grid; }
+      .fact-row, .filters, .excluded { grid-template-columns: 1fr; }
+      .filters label:first-child { grid-column: auto; }
+      .u-top, .u-body { padding-left: 17px; padding-right: 17px; }
+      .region { padding-top: 48px; }
+    }
+    @media print {
+      .jumpbar, .filters, .print-btn { display: none !important; }
+      body { background: white; color: black; font-size: 10.5pt; }
+      .hero { color: black; background: white; border-bottom: 2px solid black; padding: 20px 0; }
+      .hero p, .hero-meta span, .eyebrow { color: black; }
+      .panel, .university, .check-card, .summary { box-shadow: none; break-inside: avoid; }
+      .region { padding-top: 25px; }
+      details { display: block; }
+      details > *:not(summary) { display: block !important; }
+      a { text-decoration: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Investigación oficial · 7 de octubre de 2026</span>
+      <h1>Tu carrera en LATAM, sin mudarte.</h1>
+      <p>Universidades con licenciaturas o ingenierías en línea que admiten extranjeros. Separé las opciones comprobadas de las que exigen presencia, residencia o una verificación adicional.</p>
+      <div class="hero-meta">
+        <span>6 opciones viables</span>
+        <span>1 opción bajo verificación</span>
+        <span>Fuentes institucionales</span>
+        <span>Costos y requisitos</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jumpbar" aria-label="Navegación por secciones">
+    <div class="wrap">
+      <a href="#resumen">Resumen</a>
+      <a href="#mexico">México</a>
+      <a href="#andina">Región Andina</a>
+      <a href="#sur">Cono Sur</a>
+      <a href="#caribe">Caribe</a>
+      <a href="#descartadas">Descartadas</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#fuentes">Fuentes</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="resumen" aria-labelledby="resumen-title">
+      <div class="lede-grid">
+        <article class="panel verdict">
+          <span class="eyebrow" style="color:var(--teal)">Conclusión ejecutiva</span>
+          <h2 id="resumen-title">UNAM si buscas gratuidad; UVEG si priorizas precio; UNAD si quieres variedad.</h2>
+          <p><strong>UNAM</strong> es la única opción sólida encontrada con colegiatura realmente gratuita y admisión internacional a distancia; cobra el proceso de selección y es competitiva. <strong>UVEG</strong> no es gratis, pero aun pagando la tarifa doble de extranjero sigue siendo muy económica. <strong>UNAD</strong> ofrece el catálogo internacional más amplio y una ruta documental clara.</p>
+          <p class="mini">“100% en línea” describe la forma de estudiar, no garantiza que el título habilite para ejercer una profesión regulada en tu país.</p>
+        </article>
+        <aside class="panel price-note">
+          <strong>La gratuidad tiene letra pequeña</strong>
+          <p>En universidades públicas puede haber examen, apostilla, homologación, traducción, graduación, envío del título o prácticas. La gratuidad colombiana no debe asumirse para extranjeros y las becas anunciadas no equivalen a un precio garantizado.</p>
+        </aside>
+      </div>
+
+      <div class="summary" aria-label="Comparación rápida">
+        <table>
+          <thead><tr><th>#</th><th>Universidad</th><th>País</th><th>Precio</th><th>Desde el extranjero</th><th>Lo mejor</th><th>Alerta principal</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td><strong>UNAM · SUAyED</strong></td><td>México</td><td>Sin colegiatura; selección MXN 490 en convocatoria 2026</td><td><span class="status good">Sí</span></td><td>Prestigio + costo</td><td>Ingreso competitivo; confirmar prácticas por carrera</td></tr>
+            <tr><td><span class="rank">2</span></td><td><strong>UVEG</strong></td><td>México</td><td>≈ MXN 29,950 antes de titulación para extranjero*</td><td><span class="status good">Sí</span></td><td>Precio y flexibilidad</td><td>Revalidación mexicana obligatoria</td></tr>
+            <tr><td><span class="rank">3</span></td><td><strong>UNAD</strong></td><td>Colombia</td><td>COP 159k–175k por crédito profesional + cargos</td><td><span class="status good">Sí</span></td><td>Variedad y acreditación</td><td>Evitar programas con laboratorios presenciales</td></tr>
+            <tr><td><span class="rank">4</span></td><td><strong>UTPL</strong></td><td>Ecuador</td><td>USD 74.79–83.45 por crédito + matrícula según programa</td><td><span class="status good">Sí</span></td><td>Oferta andina amplia</td><td>Elegir solo los marcados “En línea”</td></tr>
+            <tr><td><span class="rank">5</span></td><td><strong>Universidad Mayor</strong></td><td>Chile</td><td>Ejemplo Informática: CLP 4,137,100/año + matrícula</td><td><span class="status good">Sí</span></td><td>Experiencia digital estructurada</td><td>Costo alto y homologación chilena</td></tr>
+            <tr><td><span class="rank">6</span></td><td><strong>UAPA</strong></td><td>R. Dominicana</td><td>Tarifa exterior: USD 40/crédito + USD 200/trimestre**</td><td><span class="status warn">Confirmar trámite</span></td><td>Opción caribeña</td><td>Pedir por escrito ruta remota de POMA/documentos</td></tr>
+            <tr><td><span class="rank">?</span></td><td><strong>Universidad Continental</strong></td><td>Perú</td><td>S/ 124.44–157.50 por crédito</td><td><span class="status risk">Verificar</span></td><td>Catálogo interesante</td><td>Exigir autorización SUNEDU vigente del programa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mini">*Estimación UVEG: 41 módulos, examen de ubicación y revalidación, aplicando tarifa doble publicada; no incluye repeticiones ni titulación. **UAPA publica esa tarifa para “internacionales”; pide cotización escrita para tu país.</p>
+
+      <div class="filters" aria-label="Filtros de universidades">
+        <label>Buscar por carrera o universidad<input id="search" type="search" placeholder="Ej. software, derecho, UNAM"></label>
+        <label>Precio<select id="priceFilter"><option value="all">Todos</option><option value="free">Gratis</option><option value="low">Bajo costo</option><option value="paid">Pagada</option><option value="verify">Por verificar</option></select></label>
+        <label>Área<select id="areaFilter"><option value="all">Todas</option><option value="tech">Tecnología</option><option value="business">Negocios</option><option value="social">Sociales y derecho</option><option value="education">Educación</option><option value="arts">Artes y comunicación</option></select></label>
+      </div>
+      <p id="resultCount" role="status">7 universidades mostradas</p>
+    </section>
+
+    <section class="region" id="mexico">
+      <div class="section-head"><div><small>Región 01</small><h2>México</h2></div><p>Las dos alternativas con mejor relación costo–calidad de toda la investigación.</p></div>
+      <div class="university-list">
+        <article class="university" data-price="free" data-area="tech business social education arts" data-search="unam universidad nacional autonoma mexico psicologia administracion comunicacion ciencia politica contaduria derecho economia informatica relaciones internacionales sociologia trabajo social diseño enseñanza idiomas archivonomia">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>UNAM · SUAyED</h3><p>Universidad Nacional Autónoma de México · pública</p></div><span class="badge free">Mejor opción gratis</span></div>
+            <div class="fact-row"><div class="fact"><span>Modalidad</span><strong>A distancia</strong></div><div class="fact"><span>Colegiatura</span><strong>Sin costo</strong></div><div class="fact"><span>Admisión</span><strong>Examen competitivo</strong></div><div class="fact"><span>Extranjero</span><strong>Admitido</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Qué puedes estudiar</h4>
+              <p>En la oferta a distancia 2026 aparecen: Psicología; Administración; Ciencias de la Comunicación; Ciencias Políticas y Administración Pública; Contaduría; Derecho; Economía; Relaciones Internacionales; Sociología; Trabajo Social; Diseño y Comunicación Visual; Administración de Archivos y Gestión Documental; Enseñanza de Español como Lengua Extranjera; y Enseñanza de Inglés como Lengua Extranjera.</p>
+              <div class="callout warn"><strong>Excepción importante</strong>Informática es de ingreso indirecto y contempla una evaluación interna presencial; no la considero apta para estudiar enteramente desde otro país. Las carreras de idiomas exigen acreditar dominio avanzado.</div>
+              <details><summary>Requisitos específicos para extranjero</summary>
+                <ul class="clean"><li>Bachillerato completo con promedio equivalente mínimo de 7.0/10.</li><li>Certificado extranjero sometido a equivalencia de promedio (formato F-69) y revalidación total ante DGIRE; se exige al menos 75% de equivalencia curricular.</li><li>Registro en convocatoria, pago del derecho de selección y examen de admisión de 120 reactivos.</li><li>Pasaporte/documentación migratoria o de identidad indicada por la convocatoria; apostilla/legalización y traducción cuando corresponda.</li></ul>
+              </details>
+            </div>
+            <div>
+              <h4>Costo, calidad y advertencias</h4>
+              <ul class="clean"><li><strong>Convocatoria noviembre 2026:</strong> derecho de selección de MXN 490; registro del 8 al 12 de octubre de 2026.</li><li>UNAM declara sin costo la inscripción y colegiatura; sí tendrás gastos documentales y posibles envíos.</li><li>La sede UNAM Tucson afirma que puede cursarse desde cualquier país sin viajar a México.</li><li>Es una universidad de alta reputación, pero el cupo se asigna por puntaje: cumplir requisitos no garantiza ingreso.</li></ul>
+              <div class="callout good"><strong>Ideal para</strong>Quien acepta preparar un examen competitivo y quiere minimizar el costo sin sacrificar prestigio.</div>
+              <div class="callout warn"><strong>Antes de elegir</strong>Pide a la coordinación de la carrera confirmación escrita de que prácticas, servicio social, exámenes y titulación pueden cumplirse fuera de México.</div>
+              <div class="links"><a href="https://www.case.unam.mx/ingreso/procesos/noviembre-2026" target="_blank" rel="noopener">Convocatoria 2026 ↗</a><a class="secondary" href="https://faq-escolar.cuaed.unam.mx/index.php?action=faq&amp;artlang=es&amp;cat=2&amp;id=25&amp;lang=es&amp;sid=61609953" target="_blank" rel="noopener">Extranjeros ↗</a><a class="secondary" href="https://circe.dgae.unam.mx/Licenciatura2026/oferta_lugares/oferta_ed_licenciatura2026.html" target="_blank" rel="noopener">Oferta oficial ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="university" data-price="low" data-area="tech business social education" data-search="uveg guanajuato finanzas comercio internacional ciberseguridad marketing software contaduria comportamiento humano derecho pedagogia capital humano empresas sistemas proyectos industrial tecnologias informacion">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>UVEG</h3><p>Universidad Virtual del Estado de Guanajuato · pública</p></div><span class="badge low">Costo muy bajo</span></div>
+            <div class="fact-row"><div class="fact"><span>Modalidad</span><strong>100% virtual</strong></div><div class="fact"><span>Duración mínima</span><strong>2 años 8 meses</strong></div><div class="fact"><span>Estructura</span><strong>41 módulos</strong></div><div class="fact"><span>Extranjero fuera de México</span><strong>Sí</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>15 carreras profesionales</h4>
+              <p>Finanzas; Comercio Internacional; Mercadotecnia Digital; Contaduría Pública; Ciencias del Comportamiento Humano; Derecho; Pedagogía; Administración del Capital Humano; Gestión y Desarrollo Empresarial; Ingeniería en Ciberseguridad; Desarrollo de Software; Sistemas Computacionales; Gestión de Proyectos; Ingeniería Industrial; y Gestión de Tecnologías de Información.</p>
+              <details><summary>Requisitos específicos para extranjero</summary>
+                <ul class="clean"><li>Acta de nacimiento y documento nacional de identidad equivalente; quienes viven fuera de México no necesitan CURP.</li><li>Diploma y certificado oficial de bachillerato, con materias, periodos y calificaciones.</li><li>Apostilla o legalización; traducción oficial si el documento no está en español.</li><li>Revalidación mexicana del bachillerato. UVEG puede gestionar el trámite y puede pedir plan/programas de estudio.</li></ul>
+              </details>
+            </div>
+            <div>
+              <h4>Costo estimado 2026</h4>
+              <ul class="clean"><li>Tarifa base: examen de ubicación MXN 500 y módulo MXN 345.</li><li>La universidad indica que los extranjeros pagan el doble: examen MXN 1,000 y módulo MXN 690.</li><li>Estimación de carrera: 41 × 690 + examen 1,000 + revalidación 660 = <strong>aprox. MXN 29,950</strong>, antes de titulación, envíos o repeticiones.</li><li>Un módulo de cuatro semanas a la vez; nuevas aperturas mensuales.</li></ul>
+              <div class="callout good"><strong>Ventaja operacional</strong>La FAQ contempla expresamente extranjeros fuera de México y permite completar el envío del título por mensajería.</div>
+              <div class="callout warn"><strong>Confirma</strong>Cómo realizarás desde tu país el proyecto/estancia de servicio social y cuáles cargos finales aplicarán a tu condición de extranjero.</div>
+              <div class="links"><a href="https://uveg.edu.mx/oferta-educativa/carreras-profesionales" target="_blank" rel="noopener">Carreras ↗</a><a class="secondary" href="https://uveg.edu.mx/index.php/preguntas-frecuentes" target="_blank" rel="noopener">Requisitos y costos ↗</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="region" id="andina">
+      <div class="section-head"><div><small>Región 02</small><h2>Región Andina</h2></div><p>Colombia y Ecuador ofrecen rutas internacionales claras; Perú queda como alternativa condicionada.</p></div>
+      <div class="university-list">
+        <article class="university" data-price="paid" data-area="tech business social education arts" data-search="unad colombia administracion economia contaduria negocios internacionales marketing matematicas pedagogia ingles filosofia sociologia comunicacion musica artes ciencia politica sistemas software">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>UNAD</h3><p>Universidad Nacional Abierta y a Distancia · Colombia · pública</p></div><span class="badge paid">Mejor variedad</span></div>
+            <div class="fact-row"><div class="fact"><span>Modalidad</span><strong>Campus virtual</strong></div><div class="fact"><span>Calidad</span><strong>Acreditación institucional</strong></div><div class="fact"><span>Evaluaciones</span><strong>En línea</strong></div><div class="fact"><span>Extranjero</span><strong>Ruta explícita</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Programas aptos desde el exterior</h4>
+              <p><strong>Negocios:</strong> Administración de Empresas, Economía, Contaduría Pública, Negocios Internacionales, Marketing y Negocios Digitales, y tecnologías de gestión. <strong>Educación:</strong> Matemáticas, Pedagogía Infantil, Lenguas Extranjeras–Inglés y Filosofía. <strong>Sociales/artes:</strong> Sociología, Filosofía, Comunicación Social, Música, Artes Visuales y Gestión Deportiva. <strong>Tecnología:</strong> Ingeniería de Sistemas y Tecnología en Desarrollo de Software. <strong>Público/legal:</strong> Ciencia Política y Tecnología en Gestión de Información Jurídica.</p>
+              <div class="callout warn"><strong>El catálogo no es uniformemente remoto</strong>Multimedia tiene una práctica de Física que depende del tutor; redes inalámbricas y automatización exigen prácticas presenciales. Salud y agropecuarias no son recomendables desde otro país.</div>
+              <details><summary>Requisitos específicos para extranjero</summary>
+                <ul class="clean"><li>Diploma y acta de bachiller convalidados por el Ministerio de Educación Nacional de Colombia.</li><li>Resultado Saber 11 o examen de Estado equivalente.</li><li>Pasaporte/documento vigente y fotografía.</li><li>Para países del Convenio de La Haya o Andrés Bello, la convalidación se tramita sin costo y suele tardar 15–30 días; en otros casos se pide legalización consular.</li><li>La universidad recomienda enviar primero los documentos a registro.control@unad.edu.co para revisión.</li></ul>
+              </details>
+            </div>
+            <div>
+              <h4>Costos 2026</h4>
+              <ul class="clean"><li>Programa profesional: crédito básico COP 159,000; disciplinar/específico COP 175,000.</li><li>Inscripción inicial COP 199,000; seguro estudiantil COP 9,000.</li><li>Tecnologías: COP 142,000–157,000 por crédito.</li><li>La primera matrícula suele ser de 14–21 créditos; las siguientes, 9–21.</li><li>No presupuestes “matrícula cero”: la política de gratuidad colombiana exige condiciones de elegibilidad y no es un beneficio general para extranjeros.</li></ul>
+              <div class="callout good"><strong>Calidad verificable</strong>El Ministerio de Educación colombiano renovó en 2026 la Acreditación Institucional de Alta Calidad de la UNAD por seis años.</div>
+              <div class="links"><a href="https://sai.unad.edu.co/preguntas-frecuentes/matricula" target="_blank" rel="noopener">Matrícula internacional ↗</a><a class="secondary" href="https://noticias.unad.edu.co/index.php/noticias-unad/la-unad-renueva-su-acreditacion-institucional-de-alta-calidad-por-seis-anos" target="_blank" rel="noopener">Acreditación ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="university" data-price="paid" data-area="tech business social education arts" data-search="utpl ecuador govtech administracion publica energia recursos naturales sostenibilidad negocios internacionales turismo agronegocios ciencia politica comunicacion educacion ambiente logistica literatura ciencias redes datos seguridad tecnologias informacion">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>UTPL</h3><p>Universidad Técnica Particular de Loja · Ecuador · privada</p></div><span class="badge paid">Oferta amplia</span></div>
+            <div class="fact-row"><div class="fact"><span>Modalidad elegible</span><strong>“En línea”</strong></div><div class="fact"><span>Ingreso</span><strong>Sin examen</strong></div><div class="fact"><span>Evaluaciones</span><strong>En línea controlada</strong></div><div class="fact"><span>Extranjero</span><strong>Homologación previa</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Carreras marcadas solo “En línea”</h4>
+              <p>GovTech y Administración Pública; ingenierías en Energía, Recursos Naturales y Sostenibilidad, Riesgos y Cambio Climático; Negocios Internacionales; Turismo y Negocios Gastronómicos; Agronegocios; Ciencia Política y Relaciones Internacionales; Comunicación; Educación Básica e Inicial; Gestión Ambiental; Logística y Transporte; pedagogías de Lengua y Literatura, Química/Biología, Matemáticas/Física, y Ciencias Sociales/Humanidades; Redes y Analítica de Datos; Seguridad y Salud Ocupacional; Tecnologías de la Información; y Turismo.</p>
+              <div class="callout risk"><strong>No confundas etiquetas</strong>Administración, Contabilidad, Derecho, Economía, Finanzas, Psicología, Psicopedagogía y Pedagogía de Idiomas aparecen como “En línea · Presencial”. No las incluyo como 100% remotas.</div>
+              <details><summary>Requisitos específicos para extranjero</summary><ul class="clean"><li>Pasaporte, fotografía, diploma de bachiller y compromiso/aceptación.</li><li>Reconocimiento u homologación del título de secundaria por el Ministerio de Educación de Ecuador, con copia notariada.</li><li>Apostilla/legalización y traducción cuando corresponda; incluso los convenios regionales no eliminan el trámite interno de homologación.</li><li>Documentos cargados en el sistema académico.</li></ul></details>
+            </div>
+            <div>
+              <h4>Costos 2026</h4>
+              <ul class="clean"><li>Como referencia oficial: matrícula aproximada de USD 85–111 y USD 74.79–83.45 por crédito, según carrera.</li><li>La matrícula extraordinaria/especial puede añadir 10%.</li><li>La universidad anuncia descuentos de hasta 45% y planes de pago; trátalos como promoción condicionada, no como precio seguro.</li><li>Los programas nuevos pueden no figurar en la misma tabla: solicita proforma completa del programa exacto.</li></ul>
+              <div class="callout good"><strong>Ideal para</strong>Quien quiere una oferta andina diversa y puede completar la homologación ecuatoriana antes de matricularse.</div>
+              <div class="links"><a href="https://utpl.edu.ec/en-linea" target="_blank" rel="noopener">Oferta en línea ↗</a><a class="secondary" href="https://portales.utpl.edu.ec/node/14" target="_blank" rel="noopener">Requisitos ↗</a><a class="secondary" href="https://utpl.edu.ec/documentos/transparencia/costos2026.pdf" target="_blank" rel="noopener">Costos 2026 PDF ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="university" data-price="verify" data-area="tech business social education" data-search="continental peru computacion ambiente sistemas informatica empresarial industrial derecho psicologia administracion finanzas recursos humanos publica marketing negocios digitales internacionales contabilidad educacion">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>Universidad Continental</h3><p>Perú · privada · alternativa condicionada</p></div><span class="badge verify">Verificar antes de pagar</span></div>
+            <div class="fact-row"><div class="fact"><span>Publicidad</span><strong>100% virtual</strong></div><div class="fact"><span>Catálogo</span><strong>16 carreras</strong></div><div class="fact"><span>Costo 2026</span><strong>S/ 124.44–157.50/crédito</strong></div><div class="fact"><span>Veredicto</span><strong>No confirmada</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Oferta anunciada</h4>
+              <p>Ciencias de la Computación; ingenierías Ambiental, de Sistemas e Informática, Empresarial e Industrial; Derecho; Psicología; Administración; Administración y Finanzas; Gestión de Recursos Humanos; Gestión Pública; Marketing; Negocios Digitales; Negocios Internacionales; Contabilidad y Finanzas; e Innovación Educativa y Aprendizaje Digital.</p>
+              <details><summary>Documentación extranjera</summary><p>El reglamento académico contempla certificado de cinco años de secundaria y documentos apostillados, con traducción cuando no estén en español. La ruta pública no es suficientemente específica para un estudiante que nunca viajará a Perú: pide a admisión internacional el listado completo por escrito.</p></details>
+            </div>
+            <div>
+              <div class="callout risk"><strong>Por qué no está en el ranking principal</strong>SUNEDU denegó en 2022 una modificación de licencia para trece programas a distancia de la universidad. Aunque hoy la institución vuelve a anunciar carreras virtuales, no pude confirmar con suficiente claridad la autorización vigente de cada programa.</div>
+              <p><strong>Condición mínima:</strong> antes de pagar, exige la resolución SUNEDU vigente del programa exacto, confirmación de que el título se registra en Perú y una carta que garantice cero exámenes, prácticas o trámites presenciales.</p>
+              <div class="links"><a href="https://adistancia.ucontinental.edu.pe/" target="_blank" rel="noopener">Oferta publicada ↗</a><a class="secondary" href="https://www.sunedu.gob.pe/lista-de-universidades-licenciadas/" target="_blank" rel="noopener">SUNEDU ↗</a><a class="secondary" href="https://estudiantes.ucontinental.edu.pe/oficinas/bienestar-universitario/servicio-social/escalas-costos-educativos/" target="_blank" rel="noopener">Costos ↗</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="region" id="sur">
+      <div class="section-head"><div><small>Región 03</small><h2>Cono Sur</h2></div><p>Chile tiene una opción viable pero costosa. Las públicas argentinas revisadas mantienen finales presenciales.</p></div>
+      <div class="university-list">
+        <article class="university" data-price="paid" data-area="tech business social education" data-search="universidad mayor chile administracion publica contabilidad auditoria administracion inteligencia negocios comercial industrial informatica inteligencia artificial mineria psicopedagogia">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>Universidad Mayor · Online</h3><p>Chile · privada</p></div><span class="badge paid">Estructurada, costo alto</span></div>
+            <div class="fact-row"><div class="fact"><span>Clases</span><strong>En vivo + grabadas</strong></div><div class="fact"><span>Evaluaciones</span><strong>En línea</strong></div><div class="fact"><span>Ritmo</span><strong>Trimestral</strong></div><div class="fact"><span>Acreditación</span><strong>Avanzada hasta oct. 2026</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Planes regulares desde secundaria</h4>
+              <p>Administración Pública; Contador Público y Auditor; Ingeniería en Administración; Ingeniería en Inteligencia de Negocios; Ingeniería Comercial; Ingeniería Industrial; Ingeniería en Informática; Ingeniería en Inteligencia Artificial; Ingeniería en Minas; y Psicopedagogía. No confundas estos planes con los de continuidad, que requieren estudios superiores previos.</p>
+              <details><summary>Requisitos específicos para extranjero</summary><ul class="clean"><li>Diploma y concentración de notas de secundaria del país de origen.</li><li>Apostilla/legalización y traducción al español cuando corresponda.</li><li>Obtener la Licencia de Educación Media chilena mediante reconocimiento ante MINEDUC; es obligatoria.</li><li>Certificado de nacimiento y formulario de postulación. La PAES se solicita como antecedente cuando exista, pero la página no la presenta como requisito de selección general.</li></ul></details>
+            </div>
+            <div>
+              <h4>Costo de referencia</h4>
+              <ul class="clean"><li>Ingeniería en Informática regular 2026: arancel anual CLP 4,137,100 + matrícula CLP 404,900.</li><li>La promoción 2026 anuncia matrícula liberada durante la duración formal y hasta 40% de descuento; confirma elegibilidad y renovación.</li><li>Ejemplo de duración: Informática, 12 trimestres; Ingeniería Comercial, 14 trimestres.</li></ul>
+              <div class="callout warn"><strong>Estado de calidad</strong>La acreditación institucional avanzada publicada llega hasta octubre de 2026 y la renovación está en proceso. Verifica la nueva resolución si te matriculas después de este mes.</div>
+              <div class="links"><a href="https://advance.umayor.cl/" target="_blank" rel="noopener">Oferta online ↗</a><a class="secondary" href="https://advance.umayor.cl/educacion-online/admision-online" target="_blank" rel="noopener">Admisión extranjera ↗</a><a class="secondary" href="https://www.umayor.cl/um/santiago-acreditacion-nacional" target="_blank" rel="noopener">Acreditación ↗</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="region" id="caribe">
+      <div class="section-head"><div><small>Región 04</small><h2>Caribe</h2></div><p>Una alternativa con enseñanza virtual real, pero con pasos administrativos que deben aclararse antes de matricular.</p></div>
+      <div class="university-list">
+        <article class="university" data-price="paid" data-area="tech business social education arts" data-search="uapa republica dominicana derecho administracion turismo contabilidad idiomas marketing datos informatica software psicologia educacion periodismo comunicacion">
+          <div class="u-top">
+            <div class="u-title-row"><div class="u-title"><h3>UAPA</h3><p>Universidad Abierta para Adultos · República Dominicana · privada</p></div><span class="badge paid">Confirmar ruta internacional</span></div>
+            <div class="fact-row"><div class="fact"><span>Virtual</span><strong>Sin aula física</strong></div><div class="fact"><span>Finales</span><strong>En plataforma</strong></div><div class="fact"><span>Tarifa internacional</span><strong>Publicada</strong></div><div class="fact"><span>Administración</span><strong>Con dudas remotas</strong></div></div>
+          </div>
+          <div class="u-body">
+            <div>
+              <h4>Oferta de grado relevante</h4>
+              <p>Derecho; Administración de Empresas; Administración de Empresas Turísticas; Contabilidad Empresarial; Lenguas Modernas orientadas al turismo; Mercadeo; Ciencia de Datos; Informática Gerencial; Ingeniería de Software; Psicología general, clínica, educativa e industrial; programas de Educación en arte, inicial, idiomas, primaria, lengua/literatura y matemática/física; Periodismo Digital y áreas de comunicación.</p>
+              <div class="callout risk"><strong>No recomiendo Enfermería desde otro país</strong>Aunque aparece en la oferta, las prácticas clínicas impiden tratarla como una carrera totalmente realizable a distancia. Derecho, Psicología y Educación también requieren revisar habilitación profesional en tu país.</div>
+              <details><summary>Requisitos específicos para extranjero</summary><ul class="clean"><li>Solicitud, acta de nacimiento apostillada/legalizada, certificado médico, fotografías y pasaporte vigente.</li><li>Diploma de secundaria legalizado por consulado dominicano o apostillado y luego homologado por MINERD.</li><li>Traducción legal de documentos que no estén en español.</li><li>La web general menciona entrega física de documentos y prueba POMA obligatoria; la excepción documental simplificada publicada aparece en posgrados, no claramente en grado.</li></ul></details>
+            </div>
+            <div>
+              <h4>Costos publicados</h4>
+              <ul class="clean"><li>Tarifa internacional: USD 40 por crédito + USD 200 de servicios por trimestre.</li><li>Para Europa: EUR 25 por crédito + EUR 100 de servicios por trimestre.</li><li>La tabla local incluye admisión RD$4,800, crédito RD$650, servicios RD$4,425/trimestre y cargos de graduación; no asumas que aplica al extranjero.</li></ul>
+              <div class="callout warn"><strong>Condición para recomendarla</strong>Obtén por correo una confirmación de que POMA, entrega/validación de originales, prácticas, defensa y graduación pueden completarse sin viajar, más una cotización total para tu país.</div>
+              <div class="links"><a href="https://www.uapa.edu.do/ofertas-grado/" target="_blank" rel="noopener">Carreras ↗</a><a class="secondary" href="https://www.uapa.edu.do/admisiones/" target="_blank" rel="noopener">Admisión y tarifas ↗</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="region" id="descartadas">
+      <div class="section-head"><div><small>Filtro de riesgo</small><h2>Opciones que no pasaron el criterio</h2></div><p>No las descarté por falta de calidad, sino porque no garantizan una experiencia completamente remota para un extranjero fuera del país.</p></div>
+      <div class="excluded">
+        <article><h3>UDGPlus · México</h3><p>Tiene carreras virtuales, pero la ruta publicada para extranjeros exige residir legalmente en México y presentar documentación migratoria. No sirve como opción transfronteriza general.</p><a href="https://escolar.udg.mx/estudios-realizados-en-el-extranjero" target="_blank" rel="noopener">Ver requisito oficial ↗</a></article>
+        <article><h3>UNQ · Argentina</h3><p>La Universidad Nacional de Quilmes imparte a distancia, pero sus finales se rinden presencialmente en Argentina. No cumple “100% en línea desde otro país”.</p><a href="https://www.unq.edu.ar/preguntas-frecuentes-sobre-carreras-a-distancia/" target="_blank" rel="noopener">Ver FAQ oficial ↗</a></article>
+        <article><h3>UNTREF Virtual · Argentina</h3><p>Los reglamentos y materiales de carreras contemplan evaluaciones finales presenciales o en unidades de apoyo. No hay garantía general de finalización sin viajar.</p><a href="https://www.untrefvirtual.edu.ar/descargas/reglamento_estudios_UV.pdf" target="_blank" rel="noopener">Ver reglamento PDF ↗</a></article>
+        <article><h3>Brasil: UAB, UNIVESP y similares</h3><p>La oferta pública revisada suele depender de polos físicos, documentos brasileños y/o encuentros presenciales. No encontré una opción pública, gratuita y claramente abierta al extranjero que nunca viajará.</p></article>
+        <article><h3>UnADM · México</h3><p>La admisión pública revisada gira en torno a nacionalidad/documentación mexicana (como CURP). No la incluyo sin una ruta internacional expresa y vigente.</p></article>
+        <article><h3>Gratuidad colombiana</h3><p>No es una universidad, sino una política con criterios de elegibilidad. Un extranjero no debe contar con ella hasta recibir confirmación formal de que cumple todos los requisitos.</p></article>
+      </div>
+    </section>
+
+    <section class="checklist" id="checklist">
+      <div class="check-grid">
+        <article class="check-card">
+          <h2>Checklist universal del extranjero</h2>
+          <ol class="numbered">
+            <li><strong>Pasaporte o identificación vigente.</strong></li>
+            <li><strong>Diploma y certificado de notas de secundaria</strong> con materias, calificaciones y fechas.</li>
+            <li><strong>Apostilla de La Haya o legalización consular</strong> en el país donde se emitieron.</li>
+            <li><strong>Traducción oficial</strong> si no están en español.</li>
+            <li><strong>Homologación/revalidación</strong> ante el ministerio o autoridad del país de la universidad.</li>
+            <li><strong>Confirmación escrita de cero presencialidad:</strong> exámenes, laboratorios, prácticas, servicio social, defensa y graduación.</li>
+            <li><strong>Presupuesto total:</strong> créditos, inscripción, plataforma, seguro, repeticiones, titulación, apostilla y envío.</li>
+            <li><strong>Validez en tu país:</strong> consulta al ministerio/colegio profesional antes de matricularte.</li>
+            <li><strong>Zona horaria y clases síncronas:</strong> pide el horario real y la política de asistencia.</li>
+            <li><strong>Guarda todo por escrito</strong> y paga solo a cuentas oficiales.</li>
+          </ol>
+        </article>
+        <article class="check-card question-box">
+          <h2>Mensaje que debes enviar antes de pagar</h2>
+          <ol>
+            <li>¿Puedo ingresar, cursar, evaluar, hacer prácticas/servicio social, titularme y recibir el título sin viajar?</li>
+            <li>¿Cuál es la resolución oficial y vigencia del programa en modalidad virtual?</li>
+            <li>¿Qué documentos extranjeros debo homologar, ante quién y en qué orden?</li>
+            <li>¿Cuál será mi costo total estimado como extranjero, incluidos cargos finales?</li>
+            <li>¿Las clases en vivo son obligatorias y en qué zona horaria?</li>
+            <li>¿Cómo se realiza el examen de ingreso y qué equipo/proctoring exige?</li>
+            <li>¿El título y certificado indicarán modalidad en línea? ¿Cómo los apostillo?</li>
+            <li>¿Qué ocurre si desde mi país no puedo realizar una práctica profesional?</li>
+          </ol>
+          <p>Para Derecho, Psicología, Educación, Salud, Contabilidad o ingenierías reguladas, añade: “¿Este título permite solicitar habilitación profesional en mi país?” La universidad no decide esa convalidación: lo hace la autoridad de tu país.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="method" id="fuentes">
+      <div class="method-grid">
+        <div><h2>Cómo se hizo esta investigación</h2><p>Se priorizaron páginas de admisión, reglamentos, tablas de aranceles, ministerios y agencias públicas. Una institución entra como “viable” solo cuando hay evidencia de docencia/evaluación virtual y una ruta razonable para documentos extranjeros.</p><p><strong>Corte de información:</strong> 7 de octubre de 2026. Los costos, convocatorias y acreditaciones cambian; abre siempre el enlace oficial antes de pagar.</p><button class="print-btn" type="button" onclick="window.print()">Imprimir o guardar como PDF</button></div>
+        <div><h2>Qué significa el veredicto</h2><p><span class="status good">Sí</span>: existe evidencia oficial suficiente para considerarla viable desde el exterior, con las salvedades indicadas.</p><p><span class="status warn">Confirmar trámite</span>: la docencia es virtual, pero hay una etapa administrativa que podría exigir presencia.</p><p><span class="status risk">Verificar</span>: no pagues hasta obtener la resolución y garantías indicadas.</p></div>
+      </div>
+      <h2 style="margin-top:28px">Fuentes oficiales principales</h2>
+      <ul class="source-list">
+        <li><a href="https://www.case.unam.mx/ingreso/procesos/noviembre-2026" target="_blank" rel="noopener">UNAM · convocatoria noviembre 2026</a></li>
+        <li><a href="https://repositorio.dgae.unam.mx/Licenciatura2026/instructivo_licenciatura2026.pdf" target="_blank" rel="noopener">UNAM · instructivo de ingreso 2026</a></li>
+        <li><a href="https://www.dgire.unam.mx/media/attachments/2025/07/01/emision-de-f69-epromedioyrevalidacion.pdf" target="_blank" rel="noopener">UNAM DGIRE · equivalencia y revalidación</a></li>
+        <li><a href="https://tucson.unam.mx/licenciatura-en-linea-2026-1/" target="_blank" rel="noopener">UNAM Tucson · estudiar desde cualquier país</a></li>
+        <li><a href="https://uveg.edu.mx/index.php/preguntas-frecuentes" target="_blank" rel="noopener">UVEG · extranjeros, documentos y tarifas</a></li>
+        <li><a href="https://sai.unad.edu.co/preguntas-frecuentes/matricula" target="_blank" rel="noopener">UNAD · matrícula, costos y programas para exterior</a></li>
+        <li><a href="https://utpl.edu.ec/en-linea" target="_blank" rel="noopener">UTPL · catálogo por modalidad</a></li>
+        <li><a href="https://utpl.edu.ec/documentos/transparencia/costos2026.pdf" target="_blank" rel="noopener">UTPL · costos 2026</a></li>
+        <li><a href="https://advance.umayor.cl/educacion-online/admision-online" target="_blank" rel="noopener">Universidad Mayor · admisión online extranjera</a></li>
+        <li><a href="https://advance.umayor.cl/educacion-online/ingenieria-informatica-plan-regular" target="_blank" rel="noopener">Universidad Mayor · costo ejemplo 2026</a></li>
+        <li><a href="https://www.uapa.edu.do/admisiones/" target="_blank" rel="noopener">UAPA · admisión, extranjeros y tarifas</a></li>
+        <li><a href="https://adistancia.ucontinental.edu.pe/" target="_blank" rel="noopener">Universidad Continental · oferta a distancia</a></li>
+        <li><a href="https://www.sunedu.gob.pe/lista-de-universidades-licenciadas/" target="_blank" rel="noopener">SUNEDU · universidades licenciadas</a></li>
+        <li><a href="https://escolar.udg.mx/estudios-realizados-en-el-extranjero" target="_blank" rel="noopener">UDG · requisitos de estudios extranjeros</a></li>
+        <li><a href="https://www.unq.edu.ar/preguntas-frecuentes-sobre-carreras-a-distancia/" target="_blank" rel="noopener">UNQ · finales presenciales</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><div class="wrap">Guía comparativa independiente. Verifica condiciones directamente con la universidad y con la autoridad educativa de tu país. Ninguna mención constituye garantía de admisión, beca o reconocimiento profesional.</div></footer>
+
+  <script>
+    const cards = [...document.querySelectorAll('.university')];
+    const search = document.querySelector('#search');
+    const price = document.querySelector('#priceFilter');
+    const area = document.querySelector('#areaFilter');
+    const count = document.querySelector('#resultCount');
+
+    function normalize(value) {
+      return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+
+    function filterCards() {
+      const query = normalize(search.value.trim());
+      let visible = 0;
+      cards.forEach(card => {
+        const matchesSearch = !query || normalize(card.dataset.search + ' ' + card.textContent).includes(query);
+        const matchesPrice = price.value === 'all' || card.dataset.price === price.value;
+        const matchesArea = area.value === 'all' || card.dataset.area.split(' ').includes(area.value);
+        const show = matchesSearch && matchesPrice && matchesArea;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      count.textContent = `${visible} ${visible === 1 ? 'universidad mostrada' : 'universidades mostradas'}`;
+    }
+
+    [search, price, area].forEach(control => control.addEventListener('input', filterCards));
+  </script>
+</body>
+</html>
